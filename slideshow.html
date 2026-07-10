@@ -12,7 +12,7 @@
 <h1>📸 Our Beautiful Memories 📸</h1>
 
 <div class="slideshow">
-    <img id="slide" src="images/photo1.jpg" width="400">
+    <img id="slide" src="images/photo1.jpg" width="400" alt="Memory Photo">
 </div>
 
 <p>
@@ -23,46 +23,42 @@ Thank you for making my life full of unforgettable memories. ❤️
 <a href="letter.html">
     <button>Next ➜ Read My Letter 💌</button>
 </a>
-
+<div class="cursor"></div>
 <script>
-let images = [
-"images/photo1.jpg",
-"images/photo2.jpg",
-"images/photo3.jpg",
-"images/photo4.jpg",
-"images/photo5.jpg",
-"images/photo6.jpg",
-"images/photo7.jpg",
-"images/photo8.jpg",
-"images/photo9.jpg",
-"images/photo10.jpg",
-"images/photo11.jpg",
-"images/photo12.jpg",
-"images/photo13.jpg",
-"images/photo14.jpg",
-"images/photo15.jpg",
-"images/photo16.jpg"
+const images = [
+    "images/photo1.jpg",
+    "images/photo2.jpg",
+    "images/photo3.jpg",
+    "images/photo4.jpg",
+    "images/photo5.jpg",
+    "images/photo6.jpg",
+    "images/photo7.jpg",
+    "images/photo8.jpg",
+    "images/photo9.jpg",
+    "images/photo10.jpg",
+    "images/photo11.jpg",
+    "images/photo12.jpg",
+    "images/photo13.jpg",
+    "images/photo14.jpg",
+    "images/photo15.jpg",
+    "images/photo16.jpg"
 ];
 
 let i = 0;
+const slide = document.getElementById("slide");
 
-setInterval(function() {
-    i++;
-    if (i >= images.length) {
-        i = 0;
-    }
-    document.getElementById("slide").src = images[i];
+setInterval(() => {
+    i = (i + 1) % images.length;
+    slide.src = images[i];
 }, 3000);
-</script>
-<div class="cursor"></div>
 
-<script>
-const cursor=document.querySelector(".cursor");
+const cursor = document.querySelector(".cursor");
 
-document.addEventListener("mousemove",(e)=>{
-cursor.style.left=e.pageX+"px";
-cursor.style.top=e.pageY+"px";
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
 });
 </script>
+
 </body>
 </html>
