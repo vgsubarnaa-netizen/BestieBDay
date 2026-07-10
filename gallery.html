@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Memories ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+<body>
+
+<h1>📸 Our Beautiful Memories 📸</h1>
+
+
+<p>Every picture tells a story, and every story reminds me of you. ❤️</p>
+
+<div class="gallery">
+    <img src="images/photo1.jpg">
+    <img src="images/photo2.jpg">
+    <img src="images/photo3.jpg">
+    <img src="images/photo4.jpg">
+
+    <img src="images/photo5.jpg">
+    <img src="images/photo6.jpg">
+    <img src="images/photo7.jpg">
+    <img src="images/photo8.jpg">
+
+    <img src="images/photo9.jpg">
+    <img src="images/photo10.jpg">
+    <img src="images/photo11.jpg">
+    <img src="images/photo12.jpg">
+
+    <img src="images/photo13.jpg">
+    <img src="images/photo14.jpg">
+    <img src="images/photo15.jpg">
+    <img src="images/photo16.jpg">
+</div>
+
+<br><br>
+
+
+<p>Every picture reminds me how lucky I am to have you. ❤️</p>
+
+<a href="index.html">
+    <button>⬅ Back to Home</button>
+</a>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+</script>
+</body>
+</html>

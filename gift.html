@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Gift ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <audio autoplay loop>
+    <source src="music/surprise.mp3" type="audio/mpeg">
+</audio>
+</head>
+
+<body>
+
+<h1>🎁 A Special Gift For My Love 🦢🤍</h1>
+
+<p>Click the gift box to open your surprise...</p>
+
+<div class="gift-container">
+    <div class="gift" onclick="openGift()">🎁</div>
+</div>
+
+<div id="message" style="display:none;">
+
+<h1>💝 For My Dearest 🦢🤍</h1>
+
+<p id="p1" style="display:none;" class="letter">
+If you're reading this now...
+thank you for taking this journey with me.
+This isn't just a website.
+It's a piece of my heart that I made only for you. 🤍
+</p>
+
+<p id="p2" style="display:none;" class="letter">
+This gift doesn't contain gold,
+flowers, or expensive things.
+Because none of them could ever be as valuable as our friendship.
+You are the most precious gift life has given me. ❤️
+</p>
+
+<p id="p3" style="display:none;" class="letter">
+Every laugh we shared...
+Every selfie...
+Every late-night conversation...
+Every tear...
+Every hug...
+Every memory...
+will always have a special place in my heart.
+</p>
+
+<p id="p4" style="display:none;" class="letter">
+If life takes us to different places,
+promise me one thing...
+Never forget us.
+Because I never will.
+No distance can erase the memories we've created together.
+</p>
+
+<p id="p5" style="display:none;" class="letter">
+Happy Birthday, my Visha. 🦢🤍
+
+I don't know what tomorrow brings,
+but today I just want to say...
+
+Thank you.
+
+Thank you for existing.
+Thank you for choosing me as your best friend.
+Thank you for making my life brighter.
+
+I love our friendship more than words can ever express.
+
+Forever yours,
+
+❤️ Subu ❤️
+</p>
+<p id="lastMessage" class="letter" style="display:none;">
+    Before you leave this page... <br><br> Smile once for me.<br>
+
+Because your smile is my favorite gift in this world.
+</p>
+
+<div id="nextBtn" style="display:none;text-align:center;">
+    <a href="final.html">
+        <button>🎆 Open the Final Surprise 🎆</button>
+    </a>
+</div>
+<script>
+function openGift() {
+    document.querySelector(".gift").style.display = "none";
+    document.getElementById("message").style.display = "block";
+
+    setTimeout(() => {
+        document.getElementById("p1").style.display = "block";
+    }, 1000);
+
+    setTimeout(() => {
+        document.getElementById("p2").style.display = "block";
+    }, 5000);
+
+    setTimeout(() => {
+        document.getElementById("p3").style.display = "block";
+    }, 9000);
+
+    setTimeout(() => {
+        document.getElementById("p4").style.display = "block";
+    }, 13000);
+
+    setTimeout(() => {
+        document.getElementById("p5").style.display = "block";
+    }, 17000);
+
+    setTimeout(() => {
+        document.getElementById("lastMessage").style.display = "block";
+    }, 21000);
+
+    setTimeout(() => {
+    document.getElementById("nextBtn").style.display = "block";
+    }, 25000);
+}
+</script>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+</script>
+</body>
+</html>

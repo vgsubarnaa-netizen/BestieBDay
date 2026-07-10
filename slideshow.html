@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Memories ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+<body>
+
+<h1>📸 Our Beautiful Memories 📸</h1>
+
+<div class="slideshow">
+    <img id="slide" src="images/photo1.jpg" width="400">
+</div>
+
+<p>
+Every picture tells a beautiful story...
+Thank you for making my life full of unforgettable memories. ❤️
+</p>
+
+<a href="letter.html">
+    <button>Next ➜ Read My Letter 💌</button>
+</a>
+
+<script>
+let images = [
+"image/photo1.jpg",
+"image/photo2.jpg",
+"image/photo3.jpg",
+"image/photo4.jpg",
+"image/photo5.jpg",
+"image/photo6.jpg",
+"image/photo7.jpg",
+"image/photo8.jpg",
+"image/photo9.jpg",
+"image/photo10.jpg",
+"image/photo11.jpg",
+"image/photo12.jpg",
+"image/photo13.jpg",
+"image/photo14.jpg",
+"image/photo15.jpg",
+"image/photo16.jpg"
+];
+
+let i = 0;
+
+setInterval(function() {
+    i++;
+    if (i >= images.length) {
+        i = 0;
+    }
+    document.getElementById("slide").src = images[i];
+}, 3000);
+</script>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+</body>
+</html>

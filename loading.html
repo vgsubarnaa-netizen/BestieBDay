@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff9ecf,#c8a2ff);
+font-family:Arial;
+overflow:hidden;
+}
+
+.loader{
+text-align:center;
+color:white;
+}
+
+.loader h1{
+font-size:45px;
+animation:fade 2s infinite;
+}
+
+.loader p{
+font-size:20px;
+}
+
+.spinner{
+width:80px;
+height:80px;
+border:8px solid white;
+border-top:8px solid hotpink;
+border-radius:50%;
+margin:20px auto;
+animation:spin 1.2s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+@keyframes fade{
+0%{opacity:0;}
+100%{opacity:1;}
+}
+</style>
+
+<meta http-equiv="refresh" content="5; url=index.html">
+
+</head>
+
+<body>
+
+<div class="loader">
+
+<h1>Happy Birthday 🦢🤍</h1>
+
+<div class="spinner"></div>
+
+<p>Your surprise is loading... ❤️</p>
+
+</div>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday 🦢🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio autoplay loop>
+    <source src="music/final.mp3" type="audio/mpeg">
+</audio>
+<body>
+
+<h1>🎉 Happy Birthday 🦢🤍 🎉</h1>
+
+<h2>May your smile always shine brighter than the fireworks. ✨</h2>
+
+<p class="finalmessage">
+No matter how many birthdays come and go,
+I hope our friendship stays just as beautiful.
+
+Thank you for visiting this little website.
+
+Every photo, every word, and every page was made with love just for you.
+
+ And I hope this birthday brings you endless happiness, success, and beautiful memories.
+
+No matter where life takes us, you'll always be my best part .
+
+Happy Birthday, My Soul! ❤️
+
+Love,
+Subu 🤍
+</p>
+
+<a href="index.html">
+    <button>🏠 Back to Home</button>
+</a>
+<canvas id="fireworks"></canvas>
+
+<script>
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+function random(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function createFirework() {
+    const x = random(100, canvas.width - 100);
+    const y = random(100, canvas.height / 2);
+
+    for (let i = 0; i < 100; i++) {
+        particles.push({
+            x: x,
+            y: y,
+            dx: random(-5, 5),
+            dy: random(-5, 5),
+            life: 100,
+            color: `hsl(${Math.random() * 360},100%,60%)`
+        });
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p, index) => {
+        p.x += p.dx;
+        p.y += p.dy;
+        p.dy += 0.03;
+        p.life--;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+
+        if (p.life <= 0) {
+            particles.splice(index, 1);
+        }
+    });
+
+    requestAnimationFrame(animate);
+}
+
+setInterval(createFirework, 1000);
+animate();
+
+window.onresize = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+};
+</script>
+<script>
+function createConfetti() {
+    for (let i = 0; i < 150; i++) {
+        let confetti = document.createElement("div");
+
+        confetti.innerHTML = "🎊";
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-20px";
+        confetti.style.fontSize = (Math.random() * 20 + 15) + "px";
+        confetti.style.animation = "fall " + (Math.random() * 3 + 3) + "s linear forwards";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 6000);
+    }
+}
+
+window.onload = createConfetti;
+</script>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+</script>
+</body>
+</html>
+<div style="margin-top:60px;padding:25px;background:rgba(255,255,255,0.2);border-radius:20px;color:white;">
+    <h2>🤍 Thank You🤍</h2>
+
+    <p style="font-size:22px;line-height:1.8;">
+        Every memory with you is a treasure I'll always keep in my heart.<br><br>
+
+        No matter how busy life gets or how far we are,<br>
+        you'll always be my safe place, my biggest smile, and my forever . ❤️<br><br>
+
+        Happy Birthday, my Visha 🦢🤍.<br><br>
+
+        <b>Forever & Always,</b><br>
+        <span style="font-size:28px;">❤️ Subu ❤️</span>
+    </p>
+</div>

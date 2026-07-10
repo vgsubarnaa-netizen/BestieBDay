@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio autoplay loop>
+    <source src="music/home.mp3" type="audio/mpeg">
+</audio>
+<body>
+
+<h1>🎉 A Special Surprise For 🦢🤍 🎉</h1>
+
+<h2>✨ Today is all about YOU! ✨</h2>
+
+<div class="gift">
+🎁
+</div>
+
+<p>
+Close your eyes...<br>
+Take a deep breath...<br><br>
+
+A small surprise made with lots of love is waiting for you. ❤️<br>
+Every photo, every word, and every memory reminds me how lucky I am to have you in my life.
+</p>
+
+<a href="slideshow.html">
+<button>📸 Open Our Memories</button>
+</a>
+
+<br><br>
+
+<div class="balloons">
+🎈 🎈 🎈 🎈 🎈 🎈 🎈
+</div>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+</script>
+</body>
+</html>

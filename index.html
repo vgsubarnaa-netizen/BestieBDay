@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <audio autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+<script>
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+</script>
+    <title>Happy Birthday Bestie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="surprise.html">🎁 Surprise</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="letter.html">💌 Letter</a>
+</div>
+
+<h1>🎉 Happy Birthday, My Love! 🎂</h1>
+
+<img src="images/bestie.jpg" alt="Bestie" width="250">
+
+<p>Welcome to your birthday surprise! ❤️</p>
+<h2 id="countdown"></h2>
+<a href="surprise.html">
+    <button>Open Only If Your're Ready...🎁</button>
+</a>
+    
+<script>
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💖";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*3+5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,300);
+</script>
+<div class="balloon balloon1">🎈</div>
+<div class="balloon balloon2">🎈</div>
+<div class="balloon balloon3">🎈</div>
+<div class="balloon balloon4">🎈</div>
+<script src="script.js"></script>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+</script>
+</body>
+</html>

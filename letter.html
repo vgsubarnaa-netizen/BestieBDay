@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio autoplay loop>
+    <source src="music/letternew.mp3" type="audio/mpeg">
+</audio>
+<body>
+    <h1>💌 A Letter To My🤍</h1>
+
+<p id="typing"></p>
+<script>
+const text = `My Dearest,
+
+Happy Birthday, My Baby. 🎂🤍
+
+Today is not just your birthday. It is the day the world received someone who has made my life brighter, happier, and more meaningful. I don't know if words are enough to explain how much you mean to me, but today I want to try.
+
+When I first met you, I never imagined that one day you would become one of the most important people in my life. You came into my world quietly, but your friendship filled it with laughter, happiness, unforgettable memories, and countless smiles.
+
+Every picture we have together tells a story.
+Every laugh reminds me of a beautiful moment.
+Every memory reminds me how lucky I am to have you.
+
+Life changes, people change, and time keeps moving. But one thing I truly hope never changes is our friendship. No matter where life takes us, I want us to look back years from now and smile because we were always there for each other.
+
+Thank you for staying with me during my happiest moments and my hardest days. Thank you for understanding me even when I couldn't explain myself. Thank you for listening to my endless stories, laughing at my silly jokes, supporting my dreams, and simply being YOU.
+
+You have taught me that friendship is not about talking every minute. It is about knowing that someone is always there, no matter the distance or time.
+
+If one day life becomes difficult, I hope you remember this:
+You are stronger than you think.
+You are kinder than you realize.
+You are more beautiful than you believe.
+And you will never walk alone because you will always have a friend in me.
+
+I pray that this new year of your life brings endless happiness, success, peace, good health, and every dream your heart wishes for. May every tear you ever cried be replaced with a thousand smiles. May every challenge become a success story.
+
+Years from now, when we grow older and look at these photos, I hope we laugh until our stomachs hurt and say,
+"We made the best memories together."
+
+Thank you for becoming my safe place, my partner in every crazy moment, my biggest supporter, and my forever Love.
+
+No birthday gift can ever be as precious as the friendship you have already given me.
+
+So today, I just want to say...
+
+May your smile never fade.
+May your heart always stay kind.
+May your dreams come true.
+And may our friendship last forever.
+
+I love you , today, tomorrow, and always. ❤️
+
+Forever grateful,
+
+And One More Time Happy Birthday, my beautiful soul. 🤍
+
+Today is your special day, and I just want you to know how grateful I am to have you in my life.
+
+You are not just my best.
+You are my safe place.
+You are my happiness.
+You are my family.
+
+Every memory with you is precious to me.
+
+No matter where life takes us, I promise I will always be there for you.
+
+Thank you for being my forever bestie.
+
+Happy Birthday once again Baby🤍.
+
+Your Love,
+Subu 🤍`;
+
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+    }
+}
+
+window.onload = typeWriter;
+</script>
+<div id="giftButton" style="display:none; text-align:center; margin-top:40px;">
+    <p style="color:white; font-size:22px;">
+        💖 Thank you for reading my heart...<br>
+        One last surprise is waiting for you. 🎁
+    </p>
+
+    <a href="gift.html">
+        <button class="btn">🎁 Open Gift 🎁</button>
+    </a>
+</div>
+<div class="cursor"></div>
+
+<script>
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+</script>
+<script>
+function blossom(){
+const flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(20+Math.random()*15)+"px";
+flower.style.animation="fall 8s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(blossom,500);
+window.addEventListener("scroll", function () {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+        document.getElementById("giftButton").style.display = "block";
+    }
+});
+</script>
+</body>
+</html>
